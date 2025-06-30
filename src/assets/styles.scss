@@ -34,10 +34,16 @@ $font-size-btn-middle: 18px;
 body {
   background-color: $color-bg-dark;
   font-family: $font-family-sans;
+  font-weight: 500;
   color: $color-white;
   width: 100%;
   margin: 0;
 }
+
+.container {
+  margin: 0 auto;
+}
+
 
 .section {
   height: 100vh;
@@ -46,6 +52,18 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
+
+.btn-action {
+  display: block;
+  margin: 58px auto 0 auto;
+  font-size: $font-size-btn-middle;
+  padding: 17px 35px;
+  border-radius: 100px;
+  color: $color-white;
+  background-color: $color-action-secondary;
+  border: none;
+}
+
 
 //
 // GRID
@@ -69,7 +87,6 @@ body {
     }
   }
   a {
-    font-weight: 500;
     font-size: $font-size-btn-middle;
     line-height: 26px;
     text-decoration: none;
@@ -93,14 +110,9 @@ body {
     }
     h5 {
       font-size: $font-size-normal;
-      font-weight: 500;
       margin: 0;
     }
   }
-}
-
-.container {
-  margin: 0 auto;
 }
 
 .controls {

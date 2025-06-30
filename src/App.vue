@@ -5,6 +5,7 @@
 <template>
   <header>
     <section id="section-hero" class="section">
+      <!-- TOdO: add slider -->
       <div class="container">
      			<ul class="controls">
             <li><a class="active" href="">Home</a></li>
@@ -21,6 +22,7 @@
               <h5>Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding. </h5>
             </div>
           </div>
+          <button class="btn-action btn-action-hero">Create an account</button>
       </div>
     </section>
   </header>

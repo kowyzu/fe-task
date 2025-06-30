@@ -1,0 +1,83 @@
+/* //
+// FONTS
+// ---------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+//
+// VARIABLES
+// ----------------------------------------------------
+
+//Colors
+$color-white: #fff;
+$color-heading: #1e0e62;
+$color-bg-dark: #2f1893;
+$color-grey: #ebeaed;
+$color-text-grey: #a1a1b0;
+$color-action-primary: #23dac5;
+$color-action-secondary: #482be7;
+$color-action-third: #e93a7d;
+$color-socials-youtube: #ea3223;
+$shadow-color: rgba(#000000, 0.1);
+
+//Fonts
+$font-family-sans: 'DM Sans', sans-serif;
+$font-size-bigger: 72px;
+$font-size-big: 24px;
+$font-size-normal: 22px;
+$font-size-btns-middle: 18px;
+
+//
+// GENERAL
+// ---------------------------------------------------- 
+body {
+  background-color: $color-bg-dark;
+  font-family: $font-family-sans;
+  color: $color-white;
+  width: 100%;
+  margin: 0;
+}
+
+//
+// GRID
+// ---------------------------------------------------- 
+// .container {
+//   display: grid;
+//   grid-template-columns: 1;
+//   grid-template-rows: 6;
+// }
+//
+// HERO SECTION
+// ----------------------------------------------------
+
+//
+// FEATURES SECTION
+// ----------------------------------------------------
+
+
+//
+// SECTIONS BACKGROUNDS
+// ----------------------------------------------------
+.section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section-hero {
+  background-image: url("./../images/hero-bckg.webp");
+}
+
+.section-features {
+  background-image: url("./../images/features-bckg.webp");
+}
+
+.section-call-to-action {
+  background-image: url("./../images/call-to-action-bckg.webp");
+}
+
+.section-contact {
+  background-image: url("./../images/contact-bckg.webp");
+}

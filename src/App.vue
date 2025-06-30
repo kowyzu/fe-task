@@ -17,7 +17,7 @@
 				  </ul>
           <div class="carousel-hero">
             <div class="carousel-item">
-              <h2>Startup 3</h2>
+              <p class="introduction">Startup 3</p>
               <h1>Forget About Code</h1>
               <h5>Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding. </h5>
             </div>
@@ -28,7 +28,9 @@
   </header>
 
   <main>
-    <section id="section-features" class="section"></section>
+    <section id="section-features" class="section">
+        <img class="img-notebook" src="./images/notebook.webp" alt="half of notebook displaying styles">
+    </section>
     <section id="section-call-to-action" class="section"></section>
     <section id="section-contact" class="section"></section>
     <section id="section-pricing" class="section"></section>

@@ -23,10 +23,21 @@ $shadow-color: rgba(#000000, 0.1);
 
 //Fonts
 $font-family-sans: 'DM Sans', sans-serif;
-$font-size-bigger: 72px;
-$font-size-big: 24px;
-$font-size-normal: 22px;
+$font-size-h1: 72px;
+$font-size-h2: 58px;
+$font-weight-h2: 700;
+$font-size-introduction: 24px;
+$font-size-h3: 42px;
+$font-weight-h3: 700;
+$font-size-h5: 22px;
+$font-size-paragraph: 16px;
+$font-weight-paragraph: 400;
+$font-size-label: 14px;
+$font-weight-labe: 700;
 $font-size-btn-middle: 18px;
+$fong-size-btn-big: 20px;
+
+
 
 //
 // GENERAL
@@ -102,14 +113,14 @@ body {
     text-align: center;
     h1 {
       margin: 28.8px 0 27.2px 0;
-      font-size: $font-size-bigger;
+      font-size: $font-size-h1;
     }
-    h2 {
+    .introduction {
       margin: 0;
-      font-size: $font-size-big;
+      font-size: $font-size-introduction;
     }
     h5 {
-      font-size: $font-size-normal;
+      font-size: $font-size-h5;
       margin: 0;
     }
   }
@@ -121,7 +132,69 @@ body {
 //
 // FEATURES SECTION
 // ----------------------------------------------------
+#section-features {
+  img {
+    position: absolute;
+  /* Mockup */
 
+  width: 491,65px;
+height: 535.77px;
+// left: -501.74px;
+// top: 100px;
+
+    // left: -35.84%;
+    // right: 65.6%;
+    top: 13.59%;
+    bottom: 13.62%;
+  }
+
+
+
+
+
+/* Object */
+
+// width: 983.3px;
+// height: 535.77px;
+// left: -501.74px;
+// top: 100px;
+
+
+
+// /* Space Grey */
+
+// position: absolute;
+// left: -35.84%;
+// right: 65.6%;
+// top: 13.59%;
+// bottom: 13.62%;
+
+// background: url(Image.png);
+
+
+// /* Space Grey */
+
+// position: absolute;
+// left: -35.84%;
+// right: 65.6%;
+// top: 13.59%;
+// bottom: 13.62%;
+
+// background: url(Image.png);
+
+
+// /* Space Grey */
+
+// position: absolute;
+// left: -35.84%;
+// right: 65.6%;
+// top: 13.59%;
+// bottom: 13.62%;
+
+// background: rgba(0, 0, 0, 0.0001);
+
+
+}
 
 //
 // SECTIONS BACKGROUNDS

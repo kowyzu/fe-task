@@ -10,6 +10,7 @@
 
 //Colors
 $color-white: #fff;
+$color-white-transparent: rgba(#fff, 0.3);
 $color-heading: #1e0e62;
 $color-bg-dark: #2f1893;
 $color-grey: #ebeaed;
@@ -25,7 +26,7 @@ $font-family-sans: 'DM Sans', sans-serif;
 $font-size-bigger: 72px;
 $font-size-big: 24px;
 $font-size-normal: 22px;
-$font-size-btns-middle: 18px;
+$font-size-btn-middle: 18px;
 
 //
 // GENERAL
@@ -36,6 +37,14 @@ body {
   color: $color-white;
   width: 100%;
   margin: 0;
+}
+
+.section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 //
@@ -49,7 +58,54 @@ body {
 //
 // HERO SECTION
 // ----------------------------------------------------
+#section-hero {
+  background-image: url("./../images/hero-bckg.webp");
+  ul{
+    margin: 0 auto;
+    padding: 0;
+    li{
+      display:inline-block;
+      margin: 80px 22px 0px 22px
+    }
+  }
+  a {
+    font-weight: 500;
+    font-size: $font-size-btn-middle;
+    line-height: 26px;
+    text-decoration: none;
+    color: $color-white;
+    &.active {
+      color: $color-white-transparent;
+    }
+  }
+  .carousel-item {
+    width: 736px;
+    height: 257;
+    margin: 142px auto 0 auto;
+    text-align: center;
+    h1 {
+      margin: 28.8px 0 27.2px 0;
+      font-size: $font-size-bigger;
+    }
+    h2 {
+      margin: 0;
+      font-size: $font-size-big;
+    }
+    h5 {
+      font-size: $font-size-normal;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+}
 
+.container {
+  margin: 0 auto;
+}
+
+.controls {
+  text-align: center;
+}
 //
 // FEATURES SECTION
 // ----------------------------------------------------
@@ -58,26 +114,18 @@ body {
 //
 // SECTIONS BACKGROUNDS
 // ----------------------------------------------------
-.section {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
 
-.section-hero {
-  background-image: url("./../images/hero-bckg.webp");
-}
 
-.section-features {
+
+
+#section-features {
   background-image: url("./../images/features-bckg.webp");
 }
 
-.section-call-to-action {
+#section-call-to-action {
   background-image: url("./../images/call-to-action-bckg.webp");
 }
 
-.section-contact {
+#section-contact {
   background-image: url("./../images/contact-bckg.webp");
 }

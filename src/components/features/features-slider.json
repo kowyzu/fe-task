@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "heroSubtitle": "haha 1",
+    "heroTitle": "Forget About Code",
+    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+  },
+  {
+    "id": 2,
+    "heroSubtitle": "Startup 2",
+    "heroTitle": "Forget About Code",
+    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+  },
+  {
+    "id": 3,
+    "heroSubtitle": "Startup 3",
+    "heroTitle": "Forget About Code",
+    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+  },
+  {
+    "id": 4,
+    "heroSubtitle": "Startup 4",
+    "heroTitle": "Forget About Code",
+    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+  },
+    {
+    "id": 5,
+    "heroSubtitle": "Startup 5",
+    "heroTitle": "Forget About Code",
+    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+  }
+]

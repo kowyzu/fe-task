@@ -1,13 +1,11 @@
-/* //
+//
 // FONTS
-// ---------------------------------------------------- */
+// ----------------------------------------------------
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
 
 //
 // VARIABLES
 // ----------------------------------------------------
-
 //Colors
 $color-white: #fff;
 $color-white-transparent: rgba(#fff, 0.3);
@@ -23,21 +21,49 @@ $shadow-color: rgba(#000000, 0.1);
 
 //Fonts
 $font-family-sans: 'DM Sans', sans-serif;
-$font-size-h1: 72px;
-$font-size-h2: 58px;
+// $font-size-h1: 72px;
+// $font-size-h2: 58px;
+// $font-weight-h2: 700;
+// $font-size-introduction: 24px;
+// $font-size-h3: 42px;
+// $font-weight-h3: 700;
+// $font-size-h5: 22px;
+// $font-size-paragraph: 16px;
+// $font-size-label: 14px;
+// $font-size-btn-middle: 18px;
+// $font-size-btn-big: 20px;
+// $font-size-slider-arrow: 35px;
+
+$font-size-h1: 4.5rem;
+$font-size-h2: 3.625rem;
+$font-size-h3: 2.625rem;
+$font-size-h5: 1.375rem;
+
+$font-size-span: 1.5rem;
+$font-size-paragraph: 1rem;
+$font-size-label: 0.875rem;
+
+$font-size-btn-middle: 1.125rem;
+$font-size-btn-big: 1.25rem;
+
+$font-size-slider-arrow: 2.1875rem;
+
 $font-weight-h2: 700;
-$font-size-introduction: 24px;
-$font-size-h3: 42px;
 $font-weight-h3: 700;
-$font-size-h5: 22px;
-$font-size-paragraph: 16px;
 $font-weight-paragraph: 400;
-$font-size-label: 14px;
-$font-weight-labe: 700;
-$font-size-btn-middle: 18px;
-$fong-size-btn-big: 20px;
+$font-weight-label: 700;
 
 
+
+//Animations
+$hover-transition: .4s all ease-in-out;
+$hover-animation-duration: 1.5s;
+
+//
+//BOOTSTRAP IMPORT
+// ----------------------------------------------------
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 //
 // GENERAL
@@ -47,14 +73,90 @@ body {
   font-family: $font-family-sans;
   font-weight: 500;
   color: $color-white;
-  width: 100%;
+  // width: 100%;
   margin: 0;
 }
 
-.container {
-  margin: 0 auto;
+h1 {
+  font-size: $font-size-h1;
+  
+  @include media-breakpoint-down(md) { 
+    font-size: 3rem;
+  }
+}
+h2 {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-h2;
+  
+  @include media-breakpoint-down(md) { 
+    font-size: 2.5rem;
+  }
 }
 
+h3 {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-h3;
+  
+  @include media-breakpoint-down(md) { 
+    font-size: 1.875rem;
+  }
+}
+
+h5 {
+  font-size: $font-size-h5;
+  
+  @include media-breakpoint-down(md) { 
+    font-size: 1rem;
+  }
+}
+
+p {
+  font-size: $font-size-paragraph;
+  font-weight: $font-weight-paragraph;
+
+  @include media-breakpoint-down(md) { 
+    font-size: 0.875rem;
+  }
+}
+
+span {
+  font-size: $font-size-span;
+
+  @include media-breakpoint-down(md) { 
+    font-size: 1.125rem;
+  }
+}
+
+.label {
+  font-size: $font-size-label;
+  font-weight: $font-weight-label;
+
+  @include media-breakpoint-down(md) { 
+    font-size: 0.75rem;
+  }
+}
+
+.btn-action {
+  font-size: $font-size-btn-middle;
+
+  @include media-breakpoint-up(md) { 
+    font-size: 0.875rem;
+  }
+}
+
+.btn-big {
+  font-size: $font-size-btn-big;
+
+  @include media-breakpoint-up(md) { 
+    font-size: 0.9375rem;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: $color-white !important;
+  font-size: $font-size-slider-arrow !important;
+}
 
 .section {
   height: 100vh;
@@ -67,69 +169,98 @@ body {
 .btn-action {
   display: block;
   margin: 58px auto 0 auto;
-  font-size: $font-size-btn-middle;
-  padding: 17px 35px;
-  border-radius: 100px;
+  // font-size: $font-size-btn-middle;
+  padding: 1.0625rem 2.1875rem; // 17px 35px
+  border-radius: 6.25rem;       // 100px
   color: $color-white;
   background-color: $color-action-secondary;
+  transition: $hover-transition;
+  animation-duration: $hover-animation-duration;
   border: none;
+    &:hover {
+      background-color: $color-bg-dark;
+    }
 }
 
-
-//
-// GRID
-// ---------------------------------------------------- 
-// .container {
-//   display: grid;
-//   grid-template-columns: 1;
-//   grid-template-rows: 6;
-// }
 //
 // HERO SECTION
 // ----------------------------------------------------
+.navbar-toggler {
+  border-color: $color-white;
+}
+
 #section-hero {
   background-image: url("./../images/hero-bckg.webp");
-  ul{
-    margin: 0 auto;
-    padding: 0;
-    li{
-      display:inline-block;
-      margin: 80px 22px 0px 22px
-    }
-  }
   a {
     font-size: $font-size-btn-middle;
-    line-height: 26px;
     text-decoration: none;
     color: $color-white;
-    &.active {
+    transition: $hover-transition;
+    animation-duration: $hover-animation-duration;
+    &.active, &:hover {
       color: $color-white-transparent;
     }
   }
-  .carousel-item {
-    width: 736px;
-    height: 257;
-    margin: 142px auto 0 auto;
+  .slider-hero-item {
+    width: 46rem;
+    height: 16.06rem;
+    margin: 8.875rem auto 3rem auto;
     text-align: center;
     h1 {
-      margin: 28.8px 0 27.2px 0;
-      font-size: $font-size-h1;
+      margin: 1.8rem 0 1.7rem 0;
     }
-    .introduction {
+    .hero-subtitle {
       margin: 0;
-      font-size: $font-size-introduction;
     }
     h5 {
-      font-size: $font-size-h5;
       margin: 0;
+    }
+    @include media-breakpoint-down(md) { 
+      height: auto;
+      width: auto;
     }
   }
 }
 
-.controls {
-  text-align: center;
+.navigation {
+  // max-width: 469px;
+  margin-top: 5rem;
+  margin: 0 auto;
 }
-//
+
+.navigation > div {
+  // margin-top: 80px;
+  // padding: 0 22px 0 22px;
+  // margin-top: 5rem;
+  padding: 0 1.375rem 0 1.375rem;
+}
+
+.swiper-pagination {
+  color: $color-white;
+  &-bullet {
+    background: $color-white !important;
+    &-active {
+      background: $color-white !important;
+    }
+  }
+}
+
+.swiper-features {
+  height: 100vh;
+}
+
+.swiper-features .swiper-wrapper {
+  flex-direction: column;
+}
+
+.swiper-features .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+//  
 // FEATURES SECTION
 // ----------------------------------------------------
 #section-features {
@@ -137,8 +268,10 @@ body {
     position: absolute;
   /* Mockup */
 
-  width: 491,65px;
-height: 535.77px;
+//   width: 491,65px;
+// height: 535.77px;
+width: 30.73rem;
+height: 33.49rem;
 // left: -501.74px;
 // top: 100px;
 
@@ -214,3 +347,48 @@ height: 535.77px;
 #section-contact {
   background-image: url("./../images/contact-bckg.webp");
 }
+
+// @include media-breakpoint-down(md){
+//   h1 {
+//     font-size: 3rem; // 48px
+//   }
+
+//   h2 {
+//     font-size: 2.5rem; // 40px
+//   }
+
+//   .hero-subtitle,
+//   .introduction {
+//     font-size: 1.125rem; // 18px
+//   }
+
+//   h3 {
+//     font-size: 1.875rem; // 30px
+//   }
+
+//   h5 {
+//     font-size: 1rem; // 16px
+//   }
+
+//   p,
+//   .paragraph {
+//     font-size: 0.875rem; // 14px
+//   }
+
+//   .label {
+//     font-size: 0.75rem; // 12px
+//   }
+
+//   .btn-action {
+//     font-size: 0.875rem; // 14px
+//   }
+
+//   .btn-big {
+//     font-size: 0.9375rem; // 15px
+//   }
+
+//   .swiper-button-next::after,
+//   .swiper-button-prev::after {
+//     font-size: 1.5rem !important; // 24px
+//   }
+// }

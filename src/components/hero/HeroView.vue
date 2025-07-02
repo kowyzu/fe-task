@@ -9,7 +9,7 @@ import HeroSlider from './HeroSlider.vue';
       <HeroNavigation />
       <HeroSlider />
       <form action="#section-contact">
-        <button class="btn-action btn-action-hero" type="submit">Create an account</button>
+        <button class="btn-action btn-middle" type="submit">Create an account</button>
       </form>
     </div>
   </section>

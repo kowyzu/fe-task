@@ -14,9 +14,11 @@ $color-bg-dark: #2f1893;
 $color-grey: #ebeaed;
 $color-text-grey: #a1a1b0;
 $color-action-primary: #23dac5;
+$color-action-primary-dark: #24bba9;
 $color-action-secondary: #482be7;
 $color-action-third: #e93a7d;
 $color-socials-youtube: #ea3223;
+$color-socials-youtube-dark: #b62b1f;
 $shadow-color: rgba(#000000, 0.1);
 
 //Fonts
@@ -136,7 +138,7 @@ span {
   }
 }
 
-.btn-action {
+.btn-middle {
   font-size: $font-size-btn-middle;
 
   @include media-breakpoint-down(md) { 
@@ -275,7 +277,7 @@ span {
 }
 
 h3 {
-  margin: 80px 0 20px 0;
+  margin: 0px 0 20px 0;
 }
 
 h5 {
@@ -302,6 +304,31 @@ h5 {
 #section-call-to-action {
   background-image: url("./../images/call-to-action-bckg.webp");
   min-height: 605px;
+  h2 {
+    margin: 200px 0 40px 0;
+  }
+  h5 {
+    margin: 0 auto 58px auto;
+    @include media-breakpoint-up(md) { 
+      width: 518px;
+    }
+  }
+  .btn-action {
+    background-color: $color-action-primary;
+    &:hover {
+      background-color: $color-action-primary-dark;
+    }
+  }
+  .btn-socials {
+    background-color: $color-socials-youtube;
+    border-radius: 50%;
+    border: none;
+    transition: $hover-transition;
+    animation: $hover-animation-duration;
+    &:hover {
+      background-color: $color-socials-youtube-dark;
+    }
+  }
 }
 
 #section-contact {

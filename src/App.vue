@@ -19,11 +19,12 @@ import FeaturesSlider from './components/features/FeaturesSlider.vue';
 
   <main>
     <section id="section-features" class="section">
-      <img class="img-notebook" src="./images/notebook.webp" alt="half of notebook displaying styles">
+      <img class="img-notebook  d-md-block d-none" src="./images/notebook.webp"
+        alt="half of notebook displaying styles">
       <div class="container-fluid">
         <div class="row h-100 align-items-stretch">
           <div class="col-md-4 col-0"></div>
-          <FeaturesSlider class="col-8 d-flex flex-column me-5" />
+          <FeaturesSlider class="col-md-8 d-flex flex-column me-md-5 me-0" />
         </div>
       </div>
     </section>

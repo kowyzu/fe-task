@@ -139,7 +139,7 @@ span {
 .btn-action {
   font-size: $font-size-btn-middle;
 
-  @include media-breakpoint-up(md) { 
+  @include media-breakpoint-down(md) { 
     font-size: 0.875rem;
   }
 }
@@ -147,7 +147,7 @@ span {
 .btn-big {
   font-size: $font-size-btn-big;
 
-  @include media-breakpoint-up(md) { 
+  @include media-breakpoint-down(md) { 
     font-size: 0.9375rem;
   }
 }
@@ -169,9 +169,8 @@ span {
 .btn-action {
   display: block;
   margin: 58px auto 0 auto;
-  // font-size: $font-size-btn-middle;
-  padding: 1.0625rem 2.1875rem; // 17px 35px
-  border-radius: 6.25rem;       // 100px
+  padding: 1.0625rem 2.1875rem;
+  border-radius: 6.25rem;
   color: $color-white;
   background-color: $color-action-secondary;
   transition: $hover-transition;
@@ -191,6 +190,7 @@ span {
 
 #section-hero {
   background-image: url("./../images/hero-bckg.webp");
+  min-height: 850px;
   a {
     font-size: $font-size-btn-middle;
     text-decoration: none;
@@ -245,6 +245,20 @@ span {
   }
 }
 
+//  
+// FEATURES SECTION
+// ----------------------------------------------------
+#section-features {
+  background-image: url("./../images/features-bckg.webp");
+  min-height: 736px;
+  .img-notebook {
+    position: absolute;
+    width: 30.73rem;
+    height: 33.49rem;
+    top: 13.59%;
+    bottom: 13.62%;
+  }
+
 .swiper-features {
   height: 100vh;
 }
@@ -260,86 +274,31 @@ span {
   height: auto;
 }
 
-//  
-// FEATURES SECTION
-// ----------------------------------------------------
-#section-features {
-  img {
-    position: absolute;
-  /* Mockup */
+h3 {
+  margin: 80px 0 20px 0;
+}
 
-//   width: 491,65px;
-// height: 535.77px;
-width: 30.73rem;
-height: 33.49rem;
-// left: -501.74px;
-// top: 100px;
+h5 {
+  margin-bottom: 65.6px;
+}
 
-    // left: -35.84%;
-    // right: 65.6%;
-    top: 13.59%;
-    bottom: 13.62%;
-  }
+.features-icon {
+  max-height: 2.35rem;
+}
 
+.label {
+  margin: 29px 0 16.2px 0;
+}
 
-
-
-
-/* Object */
-
-// width: 983.3px;
-// height: 535.77px;
-// left: -501.74px;
-// top: 100px;
-
-
-
-// /* Space Grey */
-
-// position: absolute;
-// left: -35.84%;
-// right: 65.6%;
-// top: 13.59%;
-// bottom: 13.62%;
-
-// background: url(Image.png);
-
-
-// /* Space Grey */
-
-// position: absolute;
-// left: -35.84%;
-// right: 65.6%;
-// top: 13.59%;
-// bottom: 13.62%;
-
-// background: url(Image.png);
-
-
-// /* Space Grey */
-
-// position: absolute;
-// left: -35.84%;
-// right: 65.6%;
-// top: 13.59%;
-// bottom: 13.62%;
-
-// background: rgba(0, 0, 0, 0.0001);
-
+.features-block {
+  max-width: 271px;
+}
 
 }
 
 //
 // SECTIONS BACKGROUNDS
 // ----------------------------------------------------
-
-
-
-
-#section-features {
-  background-image: url("./../images/features-bckg.webp");
-}
-
 #section-call-to-action {
   background-image: url("./../images/call-to-action-bckg.webp");
 }

@@ -1,14 +1,31 @@
 <template>
   <div class="swiper swiper-features">
     <div class="swiper-wrapper">
-      <div v-for="(slide, index) in textJson" :key="slide.id" class="swiper-slide px-5">
-        <div class="slider-hero-item text-center">
-          <span class="hero-subtitle">{{ slide.heroSubtitle }}</span>
-          <h1>{{ slide.heroTitle }}</h1>
-          <h5>
-            {{ slide.heroDescription }}
-          </h5>
+      <div v-for="(slide, index) in textJson" :key="slide.id"
+        class="swiper-slide features-swiper-slide px-md-5 px-0 row">
+        <div class="slider-features-item text-start row px-5 px-md-0 ">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-0">
+              <h3>{{ slide.featuresTitle }}</h3>
+              <h5>
+                {{ slide.featuresDescription }}
+              </h5>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-6 features-block">
+              <img :src="pagesIcon" alt="icon of pages" class="features-icon">
+              <div class="label">{{ slide.featuresFirstBlock.label }}</div>
+              <p>{{ slide.featuresFirstBlock.description }}</p>
+            </div>
+            <div class="col-6 features-block">
+              <img :src="symbolIcon" alt="icon of pages" class="features-icon">
+              <div class="label">{{ slide.featuresSecondBlock.label }}</div>
+              <p>{{ slide.featuresSecondBlock.description }}</p>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -20,6 +37,9 @@
 //Swiper
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import pagesIcon from '../../images/pages-icon.svg'
+import symbolIcon from '../../images/symbol-icon.svg'
+
 
 //Text
 import text_JSON from './features-slider.json'
@@ -34,6 +54,8 @@ export default {
   data() {
     return {
       textJson: text_JSON,
+      pagesIcon,
+      symbolIcon
     }
   },
   methods: {

@@ -1,32 +1,67 @@
 [
   {
     "id": 1,
-    "heroSubtitle": "haha 1",
-    "heroTitle": "Forget About Code",
-    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+    "featuresTitle": "We Create Something New",
+    "featuresDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding.",
+    "featuresFirstBlock": {
+      "label" : "30 New feature pages",
+      "description" : "Startup Framework contains components nd complex blocks which can easily."
+    },
+    "featuresSecondBlock": {
+      "label" : "Useful Symbol Components",
+      "description" : "Samples will show you the feeling on how to play around using the components."
+    }
   },
   {
     "id": 2,
-    "heroSubtitle": "Startup 2",
-    "heroTitle": "Forget About Code",
-    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+    "featuresTitle": "We Create Something New",
+    "featuresDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding.",
+    "featuresFirstBlock": {
+      "label" : "30 New feature pages",
+      "description" : "Startup Framework contains components nd complex blocks which can easily."
+    },
+    "featuresSecondBlock": {
+      "label" : "Useful Symbol Components",
+      "description" : "Samples will show you the feeling on how to play around using the components."
+    }
   },
   {
     "id": 3,
-    "heroSubtitle": "Startup 3",
-    "heroTitle": "Forget About Code",
-    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+    "featuresTitle": "We Create Something New",
+    "featuresDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding.",
+    "featuresFirstBlock": {
+      "label" : "30 New feature pages",
+      "description" : "Startup Framework contains components nd complex blocks which can easily."
+    },
+    "featuresSecondBlock": {
+      "label" : "Useful Symbol Components",
+      "description" : "Samples will show you the feeling on how to play around using the components."
+    }
   },
   {
     "id": 4,
-    "heroSubtitle": "Startup 4",
-    "heroTitle": "Forget About Code",
-    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+    "featuresTitle": "We Create Something New",
+    "featuresDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding.",
+    "featuresFirstBlock": {
+      "label" : "30 New feature pages",
+      "description" : "Startup Framework contains components nd complex blocks which can easily."
+    },
+    "featuresSecondBlock": {
+      "label" : "Useful Symbol Components",
+      "description" : "Samples will show you the feeling on how to play around using the components."
+    }
   },
     {
     "id": 5,
-    "heroSubtitle": "Startup 5",
-    "heroTitle": "Forget About Code",
-    "heroDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding."
+    "featuresTitle": "We Create Something New",
+    "featuresDescription": "Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding.",
+    "featuresFirstBlock": {
+      "label" : "30 New feature pages",
+      "description" : "Startup Framework contains components nd complex blocks which can easily."
+    },
+    "featuresSecondBlock": {
+      "label" : "Useful Symbol Components",
+      "description" : "Samples will show you the feeling on how to play around using the components."
+    }
   }
 ]

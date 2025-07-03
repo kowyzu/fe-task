@@ -163,7 +163,7 @@ span {
 .section {
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  // background-position: center;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -186,9 +186,6 @@ span {
 //
 // HERO SECTION
 // ----------------------------------------------------
-.navbar-toggler {
-  border-color: $color-white;
-}
 
 #section-hero {
   background-image: url("./../images/hero-bckg.webp");
@@ -222,28 +219,35 @@ span {
       width: auto;
     }
   }
-}
+  .navigation {
+    // max-width: 469px;
+    margin-top: 5rem;
+    margin: 0 auto;
+  }
 
-.navigation {
-  // max-width: 469px;
-  margin-top: 5rem;
-  margin: 0 auto;
-}
+  .navbar-toggler {
+  border-color: $color-white;
+  }
 
-.navigation > div {
-  // margin-top: 80px;
-  // padding: 0 22px 0 22px;
-  // margin-top: 5rem;
-  padding: 0 1.375rem 0 1.375rem;
-}
+  .navigation > div {
+    // margin-top: 80px;
+    // padding: 0 22px 0 22px;
+    // margin-top: 5rem;
+    padding: 0 1.375rem 0 1.375rem;
+  }
 
-.swiper-pagination {
-  color: $color-white;
-  &-bullet {
-    background: $color-white !important;
-    &-active {
+  .swiper-pagination {
+    color: $color-white;
+    &-bullet {
       background: $color-white !important;
+      &-active {
+        background: $color-white !important;
+      }
     }
+  }
+
+  .hero-navigation {
+    padding-top: 85px;
   }
 }
 
@@ -299,7 +303,7 @@ h5 {
 }
 
 //
-// SECTIONS BACKGROUNDS
+// CALL TO ACTION SECTION
 // ----------------------------------------------------
 #section-call-to-action {
   background-image: url("./../images/call-to-action-bckg.webp");
@@ -331,51 +335,40 @@ h5 {
   }
 }
 
+//
+// CONTACT SECTION
+// ----------------------------------------------------
 #section-contact {
   background-image: url("./../images/contact-bckg.webp");
+  min-height: 770px;
+  h3 {
+    margin-top: 150px;
+    margin-bottom: 28px;
+  }
+  h5 {
+    margin-bottom: 53.2px;
+  }
+  ul {
+    max-width: 282px;
+  }
+  li {
+    margin-bottom: 32px;
+  }
+  img {
+    max-width: 16px;
+  }
+  .contact-text {
+    max-width: 420px;
+    margin-left: 215px;
+  }
+  .contact-form {
+    background-color: $color-white;
+    width: 470px;
+    height: 500px;
+    margin-top: 100px;
+    margin-right: 216px;
+    border: 2px solid $color-white;
+    border-radius: 10px;
+  }
 }
 
-// @include media-breakpoint-down(md){
-//   h1 {
-//     font-size: 3rem; // 48px
-//   }
-
-//   h2 {
-//     font-size: 2.5rem; // 40px
-//   }
-
-//   .hero-subtitle,
-//   .introduction {
-//     font-size: 1.125rem; // 18px
-//   }
-
-//   h3 {
-//     font-size: 1.875rem; // 30px
-//   }
-
-//   h5 {
-//     font-size: 1rem; // 16px
-//   }
-
-//   p,
-//   .paragraph {
-//     font-size: 0.875rem; // 14px
-//   }
-
-//   .label {
-//     font-size: 0.75rem; // 12px
-//   }
-
-//   .btn-action {
-//     font-size: 0.875rem; // 14px
-//   }
-
-//   .btn-big {
-//     font-size: 0.9375rem; // 15px
-//   }
-
-//   .swiper-button-next::after,
-//   .swiper-button-prev::after {
-//     font-size: 1.5rem !important; // 24px
-//   }
-// }

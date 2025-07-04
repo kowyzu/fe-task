@@ -370,5 +370,64 @@ h5 {
     border: 2px solid $color-white;
     border-radius: 10px;
   }
+  .label-form {
+    color: $color-heading;
+  }
+  input {
+    color: $color-heading;
+    border: 2px solid $color-grey;
+    border-radius: 100px;
+    height: 50px;
+    &::placeholder {
+      color: $color-text-grey;
+    }
+  }
+  textarea {
+    color: $color-heading;
+    border: 2px solid $color-grey;
+    border-radius: 10px;
+    resize: none;
+    &::placeholder {
+      color: $color-text-grey;
+    }
+  }
+  .form-select {
+    color: $color-heading;
+    background-image: url(../images/angle-down-icon.svg);
+    border: 2px solid $color-grey;
+    border-radius: 100px;
+    height: 50px;
+    width: 140px;
+  }
+  .form-first-name {
+    width: 200px;
+  }
+  .form-email {
+    width: 370px;
+  }
+  .form-message {
+    width: 370px;
+  }
+  .form-check-input {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    border-color: $color-grey;
+    &:checked {
+    background-color: $color-action-primary;
+    color: $color-heading;
+    background-image: url(../images/check-icon.svg);
+    }
+  }
+  .form-check-text {
+    color: $color-text-grey;
+  }
+  .btn-middle {
+    background-color: $color-action-primary;
+    &:hover {
+      background-color: $color-action-primary-dark;
+    }
+  }
 }
+
 

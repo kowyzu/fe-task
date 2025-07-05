@@ -1,6 +1,7 @@
 [
   {
     "name": "Starter",
+    "price" : 9.99,
     "features": [
       { "id": 1, "text": "2 GB of space", "isChecked": true },
       { "id": 2, "text": "14 days of backups", "isChecked": true },
@@ -16,6 +17,7 @@
   },
   {
     "name": "Professional",
+    "price" : 19.99,
     "features": [
       { "id": 1, "text": "2 GB of space", "isChecked": true },
       { "id": 2, "text": "14 days of backups", "isChecked": true },
@@ -31,6 +33,7 @@
   },
   {
     "name": "Team",
+    "price" : 49.99,
     "features": [
       { "id": 1, "text": "2 GB of space", "isChecked": true },
       { "id": 2, "text": "14 days of backups", "isChecked": true },

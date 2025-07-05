@@ -436,8 +436,6 @@ h5 {
 // ----------------------------------------------------
 #section-pricing {
   min-height: 1130px;
-  border: 2px solid $color-action-border;
-  border-radius: 10px;
   .pricing-heading {
     margin-top: 100px;
     max-width: 586px;
@@ -449,7 +447,7 @@ h5 {
     }
   }
   .pricing-table {
-    width: 370px;
+    max-width: 370px;
     height: 730px;
     border: 2px solid $color-action-border;
     border-radius: 10px;

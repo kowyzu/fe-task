@@ -13,10 +13,12 @@ $color-heading: #1e0e62;
 $color-bg-dark: #2f1893;
 $color-grey: #ebeaed;
 $color-text-grey: #a1a1b0;
+$color-text-list-grey: #C1BADF;
 $color-action-primary: #23dac5;
 $color-action-primary-dark: #24bba9;
 $color-action-secondary: #482be7;
 $color-action-third: #e93a7d;
+$color-action-border: #6C5DB3;
 $color-socials-youtube: #ea3223;
 $color-socials-youtube-dark: #b62b1f;
 $shadow-color: rgba(#000000, 0.1);
@@ -112,7 +114,7 @@ h5 {
   }
 }
 
-p {
+p, sup {
   font-size: $font-size-paragraph;
   font-weight: $font-weight-paragraph;
 
@@ -186,7 +188,6 @@ span {
 //
 // HERO SECTION
 // ----------------------------------------------------
-
 #section-hero {
   background-image: url("./../images/hero-bckg.webp");
   min-height: 850px;
@@ -358,7 +359,7 @@ h5 {
     max-width: 16px;
   }
   .contact-text {
-    max-width: 420px;
+    max-width: 410px;
     margin-left: 215px;
   }
   .contact-form {
@@ -430,4 +431,79 @@ h5 {
   }
 }
 
+//
+// PRICING SECTION
+// ----------------------------------------------------
+#section-pricing {
+  min-height: 1130px;
+  border: 2px solid $color-action-border;
+  border-radius: 10px;
+  .pricing-heading {
+    margin-top: 100px;
+    max-width: 586px;
+    h3 {
+      margin-bottom: 30px;
+    }
+    h5 {
+      margin-bottom: 54px;
+    }
+  }
+  .pricing-table {
+    width: 370px;
+    height: 730px;
+    border: 2px solid $color-action-border;
+    border-radius: 10px;
+    .pricing-table-heading {
+      margin-left: 49px;
+      .currency {
+        vertical-align: super;
+        line-height: 1.2;
+      }
+      h2 {
+        margin-bottom: 45px;
+      }
+      h5 {
+        margin-top: 40.2px;
+        margin-bottom: 22px;
+      }
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-left: 30px;
+    }
+    li {
+      list-style: none;
+    }
+    .list-item {
+      color: $color-text-list-grey;
+    }
+    .checked-list-item {
+      color: $color-white;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      list-style: none;
 
+      .check-icon {
+        width: 12px;
+        height: 8px;
+        background-image: url('../images/check-pricing-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex-shrink: 0;
+        margin-top: 0.4em;
+      }
+    }
+    .btn-action {
+      width: 230px;
+      border: 2px solid $color-action-border;
+      background-color: $color-bg-dark;
+      &:hover {
+        border-color: transparent;
+        background-color: $color-action-third;
+      }
+    }
+  }
+}

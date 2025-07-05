@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Starter",
+    "features": [
+      { "id": 1, "text": "2 GB of space", "isChecked": true },
+      { "id": 2, "text": "14 days of backups", "isChecked": true },
+      { "id": 3, "text": "Social integrations", "isChecked": true },
+      { "id": 4, "text": "Client billing", "isChecked": true },
+      { "id": 5, "text": "Remote access", "isChecked": false },
+      { "id": 6, "text": "Custom domain", "isChecked": false },
+      { "id": 7, "text": "24 hours support", "isChecked": false },
+      { "id": 8, "text": "Admin tools", "isChecked": false },
+      { "id": 9, "text": "Collaboration tools", "isChecked": false },
+      { "id": 10, "text": "User management", "isChecked": false }
+    ]
+  },
+  {
+    "name": "Professional",
+    "features": [
+      { "id": 1, "text": "2 GB of space", "isChecked": true },
+      { "id": 2, "text": "14 days of backups", "isChecked": true },
+      { "id": 3, "text": "Social integrations", "isChecked": true },
+      { "id": 4, "text": "Client billing", "isChecked": true },
+      { "id": 5, "text": "Remote access", "isChecked": true },
+      { "id": 6, "text": "Custom domain", "isChecked": true },
+      { "id": 7, "text": "24 hours support", "isChecked": true },
+      { "id": 8, "text": "Admin tools", "isChecked": false },
+      { "id": 9, "text": "Collaboration tools", "isChecked": false },
+      { "id": 10, "text": "User management", "isChecked": false }
+    ]
+  },
+  {
+    "name": "Team",
+    "features": [
+      { "id": 1, "text": "2 GB of space", "isChecked": true },
+      { "id": 2, "text": "14 days of backups", "isChecked": true },
+      { "id": 3, "text": "Social integrations", "isChecked": true },
+      { "id": 4, "text": "Client billing", "isChecked": true },
+      { "id": 5, "text": "Remote access", "isChecked": true },
+      { "id": 6, "text": "Custom domain", "isChecked": true },
+      { "id": 7, "text": "24 hours support", "isChecked": true },
+      { "id": 8, "text": "Admin tools", "isChecked": true },
+      { "id": 9, "text": "Collaboration tools", "isChecked": true },
+      { "id": 10, "text": "User management", "isChecked": true }
+    ]
+  }
+]

@@ -1,15 +1,15 @@
 <template>
-  <div class="contact-form container text-start d-flex flex-column justify-content-center mb-5 mb-md-0 py-5 py-lg-0">
+  <div class="contact-form container text-start d-flex flex-column justify-content-center mb-5 mb-md-0 py-5 py-xl-0">
     <div class="row justify-content-center">
-      <div class="row justify-content-lg-between justify-content-center">
+      <div class="row justify-content-xl-between justify-content-center">
         <div class="col-11">
-          <div class="row row-cols-lg-2 row-cols-1">
-            <div class="col-lg-7 col pt-3 pt-lg-0 px-0">
+          <div class="row row-cols-xl-2 row-cols-1">
+            <div class="col-xl-7 col pt-3 pt-xl-0 px-0">
               <span class="label label-form text-uppercase">Your name</span>
               <input name="firstName" id="firstName" type="text" class="form-control form-first-name mt-2 mb-4"
                 placeholder="First name" aria-label="First name">
             </div>
-            <div class="col-lg-4  px-0">
+            <div class="col-xl-4  px-0">
               <span class="label label-form text-uppercase">Budget</span>
               <select class="form-select mt-2 mb-4" aria-label="select budget">
                 <option selected>$500</option>

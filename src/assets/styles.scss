@@ -204,6 +204,7 @@ span {
 // ----------------------------------------------------
 #section-hero {
   background-image: url("./../images/hero-bckg.webp");
+  height: auto;
   @include media-breakpoint-up(md) { 
     min-height: 850px;
   }
@@ -350,6 +351,7 @@ span {
 // ----------------------------------------------------
 #section-contact {
   background-image: url("./../images/contact-bckg.webp");
+  height: auto;
   min-height: 770px;
   h3 {
     margin-top: 150px;
@@ -368,7 +370,7 @@ span {
     max-width: 16px;
   }
   .contact-text {
-    @include media-breakpoint-up(lg) { 
+    @include media-breakpoint-up(xl) { 
       max-width: 410px;
       margin-left: 215px;
     }
@@ -377,7 +379,7 @@ span {
     background-color: $color-white;
     border: 2px solid $color-white;
     border-radius: 10px;
-    @include media-breakpoint-up(lg) { 
+    @include media-breakpoint-up(xl) { 
       width: 470px;
       height: 500px;
       margin-right: 216px;
@@ -433,7 +435,7 @@ span {
     }
   }
 
-  @include media-breakpoint-up(lg) { 
+  @include media-breakpoint-up(xl) { 
     .form-first-name {
       width: 200px;
     }
@@ -454,6 +456,7 @@ span {
 // ----------------------------------------------------
 #section-pricing {
   @include media-breakpoint-up(lg) { 
+    height: auto;
     min-height: 1130px;
   }
   .pricing-heading {
@@ -471,7 +474,7 @@ span {
     height: 730px;
     border: 2px solid $color-action-border;
     border-radius: 10px;
-    @include media-breakpoint-up(lg) { 
+    @include media-breakpoint-up(xl) { 
       max-width: 370px;
     }
     .pricing-table-heading {

@@ -5,7 +5,7 @@ import HeroSlider from './HeroSlider.vue';
 
 <template>
   <section id="section-hero" class="section">
-    <div class="container">
+    <div class="container-md container-fluid">
       <HeroNavigation />
       <HeroSlider />
       <form class="pb-5 pb-md-0" action="#section-contact">

@@ -2,18 +2,18 @@
   <div class="swiper swiper-hero">
     <div class="swiper-wrapper">
       <div v-for="(slide, index) in textJson" :key="slide.id" class="swiper-slide">
-        <div class="slider-hero-item text-center px-md-0 px-5">
+        <div class="slider-hero-item text-center px-md-0 px-5 mb-5">
           <span class="hero-subtitle">{{ slide.heroSubtitle }}</span>
           <h1>{{ slide.heroTitle }}</h1>
-          <h5>
+          <h5 class="px-md-5 px-lg-0 px-0">
             {{ slide.heroDescription }}
           </h5>
         </div>
       </div>
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev d-md-block d-none"></div>
-    <div class="swiper-button-next d-md-block d-none"></div>
+    <div class="swiper-button-prev d-lg-block d-none"></div>
+    <div class="swiper-button-next d-lg-block d-none"></div>
   </div>
 </template>
 
@@ -53,9 +53,9 @@ export default {
           prevEl: '.swiper-button-prev',
         },
 
-        autoplay: {
-          delay: 5000,
-        },
+        // autoplay: {
+        //   delay: 5000,
+        // },
       });
     }
   },

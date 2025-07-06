@@ -218,12 +218,12 @@ span {
     }
   }
   .slider-hero-item {
-    width: 46rem;
-    height: 16.06rem;
     text-align: center;
     margin: 3rem auto 3rem auto;
-    @include media-breakpoint-up(md) { 
+    @include media-breakpoint-up(lg) { 
       margin-top: 3rem;
+      width: 46rem;
+      height: 16.06rem;
     }
     h1 {
       margin: 1.8rem 0 1.7rem 0;

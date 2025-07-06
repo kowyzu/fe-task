@@ -21,6 +21,7 @@ $color-action-third: #e93a7d;
 $color-action-border: #6C5DB3;
 $color-socials-youtube: #ea3223;
 $color-socials-youtube-dark: #b62b1f;
+$color-error: #dc3546c6;
 $shadow-color: rgba(#000000, 0.1);
 
 //Fonts
@@ -418,6 +419,18 @@ span {
     &:hover {
       background-color: $color-action-primary-dark;
     }
+  }
+  .form-error-msg{
+    font-size: $font-size-label;
+    margin-top: 0.25rem;
+    color: $color-error;
+  }
+  .form-error-input{
+    border-color: $color-error;
+  }
+
+  .form-error-missing input {
+    border-color: $color-error;
   }
   @include media-breakpoint-up(xl) { 
     .form-first-name {

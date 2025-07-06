@@ -1,57 +1,153 @@
 <template>
   <div class="contact-form container text-start d-flex flex-column justify-content-center mb-5 mb-md-0 py-5 py-xl-0">
-    <div class="row justify-content-center">
-      <div class="row justify-content-xl-between justify-content-center">
-        <div class="col-11">
-          <div class="row row-cols-xl-2 row-cols-1">
-            <div class="col-xl-7 col pt-3 pt-xl-0 px-0">
-              <span class="label label-form text-uppercase">Your name</span>
-              <input name="firstName" id="firstName" type="text" class="form-control form-first-name mt-2 mb-4"
-                placeholder="First name" aria-label="First name">
-            </div>
-            <div class="col-xl-4  px-0">
-              <span class="label label-form text-uppercase">Budget</span>
-              <select class="form-select mt-2 mb-4" aria-label="select budget">
-                <option selected>$500</option>
-                <option value="1">$600</option>
-                <option value="2">$700</option>
-                <option value="3">$800</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
+    <form novalidate @submit.prevent="handleFormSubmit()">
       <div class="row justify-content-center">
-        <div class="col-11 px-0">
-          <span class="label label-form text-uppercase">Input field</span>
-          <input name="email" id="email" type="text" class="form-control form-email mt-2 mb-4"
-            placeholder="name@mail.com" aria-label="e-mail">
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-11 px-0">
-          <span class="label label-form text-uppercase">Your message</span>
-          <textarea name="message" id="message" class="form-control form-message p-3 mt-2 mb-4" placeholder="Message"
-            aria-label="message" rows="3"></textarea>
-        </div>
-      </div>
-      <div class="row justify-content-evenly">
-        <div class="col-11">
-          <div class="row gx-5">
-            <div class="col-md-7 col align-content-center">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="yes" id="checkChecked" checked>
-                <label class="form-check-label" for="checkChecked">
-                  <p class="form-check-text">Send me a copy</p>
-                </label>
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="row row-cols-xl-2 row-cols-1">
+              <div class="col-xl-7 col pt-3 pt-xl-0 px-0">
+                <span class="label label-form text-uppercase">Your name</span>
+                <NameInput ref="nameInput" id="firstName" placeholder="First name" v-model.trim="name" />
+              </div>
+              <div class="col-xl-4  px-0">
+                <span class="label label-form text-uppercase">Budget</span>
+                <select class="form-select mt-2 mb-4" aria-label="select budget">
+                  <option selected>$500</option>
+                  <option value="1">$600</option>
+                  <option value="2">$700</option>
+                  <option value="3">$800</option>
+                </select>
               </div>
             </div>
-            <div class="col-md-4 col pb-3 pb-md-0">
-              <button class="btn-action btn-middle m-0">Send</button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 px-0">
+            <span class="label label-form text-uppercase">Input field</span>
+            <EmailInput />
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 px-0">
+            <span class="label label-form text-uppercase">Your message</span>
+            <MessageTextArea ref="messageTextArea" id="message" placeholder="Message" v-model.trim="message" />
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-11">
+            <div class="row gx-5">
+              <div class="col-md-7 col align-content-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="yes" id="checkChecked" checked>
+                  <label class="form-check-label" for="checkChecked">
+                    <p class="form-check-text">Send me a copy</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-4 col pb-3 pb-md-0">
+                <button type="submit" class="btn-action btn-middle m-0">Send</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </template>
+
+<script>
+import NameInput from './NameInput.vue';
+import EmailInput from './EmailInput.vue';
+import MessageTextArea from './MessageTextArea.vue';
+
+export default {
+  components: {
+    NameInput,
+    EmailInput,
+    MessageTextArea,
+  },
+  data() {
+    return {
+      name: '',
+      phoneNumber: '',
+      email: '',
+      message: '',
+      error: null,
+      success: null,
+      statusMessage: '',
+      phoneError: '',
+      emailError: '',
+    }
+  },
+  methods: {
+    // Handle errors emmited from EmailInput.vue and PhoneInput.vue components
+    handlePhoneError(msg) {
+      this.phoneError = msg;
+    },
+
+    handleEmailError(msg) {
+      this.emailError = msg;
+    },
+
+
+    // Validate form inputs via specific validation methods from form conponents
+    isFormValid() {
+
+      let isNameValid = this.$refs.nameInput.validate();
+      // let isPhoneValid = this.$refs.phoneInput.validate();
+      // let isEmailValid = this.$refs.emailInput.validate();
+      let isMessageValid = this.$refs.messageTextArea.validate();
+
+
+      // Either mail or phonNumber is required
+      if (!this.requirePhoneOrEmail()) {
+        this.error = true;
+        this.phoneOrEmailMissing = true;
+        return false;
+      }
+
+      this.phoneOrEmailMissing = null;
+
+      if (!isNameValid || !isMessageValid || (!isEmailValid && !isPhoneValid)) {
+        this.error = true;
+        return false;
+      }
+
+      this.error = null;
+      this.phoneOrEmailMissing = false;
+      this.phoneError = '';
+      this.emailError = '';
+      return true;
+    },
+
+
+    // After form submitting validate data, prepare object with filled data and post to index.php
+    handleFormSubmit() {
+      if (!this.isFormValid()) {
+        return;
+      }
+      else { this.cleanForm() }
+    },
+
+    // Display toast with statusMessage
+    displayToast() {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(this.$refs.toast);
+      toastBootstrap.show();
+    },
+
+    // Clean input values in form
+    cleanForm() {
+      this.name = '';
+      this.phoneNumber = '';
+      this.email = '';
+      this.message = '';
+      this.phoneError = null;
+      this.emailError = null;
+      this.phoneOrEmailMissing = null;
+      this.error = null;
+      this.$refs.phoneInput.cleanErrors();
+      this.$refs.emailInput.cleanErrors();
+    }
+  }
+}
+</script>

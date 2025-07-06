@@ -161,7 +161,7 @@ span {
   // background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  @include media-breakpoint-up(md) { 
+  @include media-breakpoint-up(lg) { 
     height: 100vh;
   }
 }
@@ -368,7 +368,7 @@ span {
     max-width: 16px;
   }
   .contact-text {
-    @include media-breakpoint-up(md) { 
+    @include media-breakpoint-up(lg) { 
       max-width: 410px;
       margin-left: 215px;
     }
@@ -377,7 +377,7 @@ span {
     background-color: $color-white;
     border: 2px solid $color-white;
     border-radius: 10px;
-    @include media-breakpoint-up(md) { 
+    @include media-breakpoint-up(lg) { 
       width: 470px;
       height: 500px;
       margin-right: 216px;
@@ -432,7 +432,8 @@ span {
       background-color: $color-action-primary-dark;
     }
   }
-  @include media-breakpoint-up(md) { 
+
+  @include media-breakpoint-up(lg) { 
     .form-first-name {
       width: 200px;
     }

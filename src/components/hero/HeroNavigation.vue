@@ -8,11 +8,11 @@
 
       <div class="collapse navbar-collapse justify-content-md-center" id="navbarNavAltMarkup">
         <div class="navbar-nav text-md-center">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#section-features">Features</a>
-          <a class="nav-link" href="#section-call-to-action">Details</a>
-          <a class="nav-link" href="#section-pricing">Pricing</a>
-          <a class="nav-link" href="#section-footer">Footer</a>
+          <a class="nav-link active pe-md-4 pe-0" aria-current="page" href="#">Home</a>
+          <a class="nav-link pe-md-4 pe-0" href="#section-features">Features</a>
+          <a class="nav-link pe-md-4 pe-0" href="#section-call-to-action">Details</a>
+          <a class="nav-link pe-md-4 pe-0" href="#section-pricing">Pricing</a>
+          <a class="nav-link pe-md-4 pe-0" href="#section-footer">Footer</a>
         </div>
       </div>
     </div>

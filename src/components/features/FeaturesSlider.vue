@@ -5,20 +5,20 @@
         class="swiper-slide features-swiper-slide px-md-5 px-0 row">
         <div class="slider-features-item text-start row px-5 px-md-0 ">
           <div class="row justify-content-center">
-            <div class="col-md-8 col-0">
+            <div class="col-md-8 col mt-5 pt-md-0">
               <h3>{{ slide.featuresTitle }}</h3>
               <h5>
                 {{ slide.featuresDescription }}
               </h5>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-6 features-block">
+          <div class="row row-cols-md-2 row-cols-1 justify-content-center">
+            <div class="col-md-6 col features-block">
               <img :src="pagesIcon" alt="icon of pages" class="features-icon">
               <div class="label">{{ slide.featuresFirstBlock.label }}</div>
               <p>{{ slide.featuresFirstBlock.description }}</p>
             </div>
-            <div class="col-6 features-block">
+            <div class="col-md-6 col features-block mt-4 mt-md-0">
               <img :src="symbolIcon" alt="icon of pages" class="features-icon">
               <div class="label">{{ slide.featuresSecondBlock.label }}</div>
               <p>{{ slide.featuresSecondBlock.description }}</p>
@@ -71,6 +71,8 @@ export default {
         autoplay: {
           delay: 5000,
         },
+        slidesPerView: 1,
+        spaceBetween: 15,
       });
     }
   },

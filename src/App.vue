@@ -4,6 +4,7 @@ import FeaturesView from './components/features/FeaturesView.vue';
 import CallToActionView from './components/call-to-action/CallToActionView.vue';
 import ContactView from './components/contact/ContactView.vue';
 import PricingView from './components/pricing/PricingView.vue';
+import FooterView from './components/footer/FooterView.vue';
 </script>
 
 <template>
@@ -19,6 +20,6 @@ import PricingView from './components/pricing/PricingView.vue';
   </main>
 
   <footer id="footer">
-    <!-- footer placeholder -->
+    <FooterView />
   </footer>
 </template>

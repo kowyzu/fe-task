@@ -156,23 +156,22 @@ span {
   }
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  color: $color-white !important;
-  font-size: $font-size-slider-arrow !important;
-}
-
 .section {
-  height: 100vh;
   background-size: cover;
   // background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  @include media-breakpoint-up(md) { 
+    height: 100vh;
+  }
 }
 
 .btn-action {
   display: block;
-  margin: 58px auto 0 auto;
+  margin: 30px auto 0 auto;
+  @include media-breakpoint-up(md) { 
+    margin-top: 58px;
+  }
   padding: 1.0625rem 2.1875rem;
   border-radius: 6.25rem;
   color: $color-white;
@@ -185,12 +184,29 @@ span {
     }
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  color: $color-white !important;
+  font-size: $font-size-slider-arrow !important;
+}
+
+.swiper-pagination-bullet {
+  background: transparent !important;
+  border: 1px solid $color-white !important;
+  &-active {
+    background: $color-white !important;
+  }
+}
+
+
 //
 // HERO SECTION
 // ----------------------------------------------------
 #section-hero {
   background-image: url("./../images/hero-bckg.webp");
-  min-height: 850px;
+  @include media-breakpoint-up(md) { 
+    min-height: 850px;
+  }
   a {
     font-size: $font-size-btn-middle;
     text-decoration: none;
@@ -204,8 +220,11 @@ span {
   .slider-hero-item {
     width: 46rem;
     height: 16.06rem;
-    margin: 8.875rem auto 3rem auto;
     text-align: center;
+    margin: 3rem auto 3rem auto;
+    @include media-breakpoint-up(md) { 
+      margin-top: 3rem;
+    }
     h1 {
       margin: 1.8rem 0 1.7rem 0;
     }
@@ -231,24 +250,14 @@ span {
   }
 
   .navigation > div {
-    // margin-top: 80px;
-    // padding: 0 22px 0 22px;
-    // margin-top: 5rem;
     padding: 0 1.375rem 0 1.375rem;
   }
 
-  .swiper-pagination {
-    color: $color-white;
-    &-bullet {
-      background: $color-white !important;
-      &-active {
-        background: $color-white !important;
-      }
-    }
-  }
-
   .hero-navigation {
-    padding-top: 85px;
+    padding-top: 25px;
+    @include media-breakpoint-up(md) { 
+      padding-top: 85px;
+    }
   }
 }
 
@@ -265,42 +274,39 @@ span {
     top: 13.59%;
     bottom: 13.62%;
   }
-
-.swiper-features {
-  height: 100vh;
-}
-
-.swiper-features .swiper-wrapper {
-  flex-direction: column;
-}
-
-.swiper-features .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
-
-h3 {
-  margin: 0px 0 20px 0;
-}
-
-h5 {
-  margin-bottom: 65.6px;
-}
-
-.features-icon {
-  max-height: 2.35rem;
-}
-
-.label {
-  margin: 29px 0 16.2px 0;
-}
-
-.features-block {
-  max-width: 271px;
-}
-
+  .swiper-features {
+    height: 800px;
+    @include media-breakpoint-up(md) { 
+      height: 100vh;
+    }
+  }
+  .swiper-features .swiper-wrapper {
+    flex-direction: column;
+  }
+  .swiper-features .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  h3 {
+    margin: 0px 0 20px 0;
+  }
+  h5 {
+    margin-bottom: 65.6px;
+  }
+  .features-icon {
+    max-height: 2.35rem;
+  }
+  .label {
+    margin: 29px 0 16.2px 0;
+  }
+  .features-block {
+    max-width: 271px;
+  }
+  .swiper-pagination {
+    padding-right: 40px;
+  }
 }
 
 //
@@ -308,9 +314,12 @@ h5 {
 // ----------------------------------------------------
 #section-call-to-action {
   background-image: url("./../images/call-to-action-bckg.webp");
-  min-height: 605px;
+  height: 605px;
   h2 {
-    margin: 200px 0 40px 0;
+    margin: 120px 0 40px 0;
+    @include media-breakpoint-up(md) { 
+      margin: 100px 0 40px 0;
+    }
   }
   h5 {
     margin: 0 auto 58px auto;
@@ -359,17 +368,21 @@ h5 {
     max-width: 16px;
   }
   .contact-text {
-    max-width: 410px;
-    margin-left: 215px;
+    @include media-breakpoint-up(md) { 
+      max-width: 410px;
+      margin-left: 215px;
+    }
   }
   .contact-form {
     background-color: $color-white;
-    width: 470px;
-    height: 500px;
-    margin-top: 100px;
-    margin-right: 216px;
     border: 2px solid $color-white;
     border-radius: 10px;
+    @include media-breakpoint-up(md) { 
+      width: 470px;
+      height: 500px;
+      margin-right: 216px;
+      margin-top: 100px;
+    }
   }
   .label-form {
     color: $color-heading;
@@ -398,16 +411,6 @@ h5 {
     border: 2px solid $color-grey;
     border-radius: 100px;
     height: 50px;
-    width: 140px;
-  }
-  .form-first-name {
-    width: 200px;
-  }
-  .form-email {
-    width: 370px;
-  }
-  .form-message {
-    width: 370px;
   }
   .form-check-input {
     width: 20px;
@@ -429,13 +432,30 @@ h5 {
       background-color: $color-action-primary-dark;
     }
   }
+  @include media-breakpoint-up(md) { 
+    .form-first-name {
+      width: 200px;
+    }
+    .form-email {
+      width: 370px;
+    }
+    .form-message {
+      width: 370px;
+    }
+    .form-select {
+      width: 140px;
+    }
+  }
 }
 
 //
 // PRICING SECTION
 // ----------------------------------------------------
 #section-pricing {
+    @include media-breakpoint-up(md) { 
   min-height: 1130px;
+      
+    }
   .pricing-heading {
     margin-top: 100px;
     max-width: 586px;
@@ -502,6 +522,20 @@ h5 {
         border-color: transparent;
         background-color: $color-action-third;
       }
+    }
+  }
+}
+
+//
+// FOOTER SECTION
+// ----------------------------------------------------
+footer {
+  p {
+    color: $color-white;
+    transition: $hover-transition;
+    animation-duration: $hover-animation-duration;
+    &:hover {
+      color: $color-white-transparent;
     }
   }
 }

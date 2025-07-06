@@ -6,7 +6,7 @@ import arrowIcon from '../../images/arrow-icon.svg'
   <section id="section-call-to-action" class="section">
     <div class="container">
       <div class="row text-center justify-content-center align-content-center">
-        <div class="col-8">
+        <div class="col-md-8 col p-3 p-md-0">
           <h2>Easy to setup.<br>Easy to maintain</h2>
           <h5>
             Bootstrap is a widely-used, sleek, intuitive and powerful front-end framework for faster and easier web

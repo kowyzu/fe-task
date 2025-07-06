@@ -1,15 +1,15 @@
 <template>
-  <div class="contact-form container text-start d-flex flex-column justify-content-center">
+  <div class="contact-form container text-start d-flex flex-column justify-content-center mb-5 mb-md-0">
     <div class="row justify-content-center">
       <div class="row justify-content-between">
         <div class="col-11">
-          <div class="row">
-            <div class="col-7">
+          <div class="row row-cols-md-2 row-cols-1">
+            <div class="col-md-7 col pt-3 pt-md-0">
               <span class="label label-form text-uppercase">Your name</span>
               <input name="firstName" id="firstName" type="text" class="form-control form-first-name mt-2 mb-4"
                 placeholder="First name" aria-label="First name">
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col">
               <span class="label label-form text-uppercase">Budget</span>
               <select class="form-select mt-2 mb-4" aria-label="select budget">
                 <option selected>$500</option>
@@ -38,7 +38,7 @@
       <div class="row justify-content-evenly">
         <div class="col-11">
           <div class="row gx-5">
-            <div class="col-7 align-content-center">
+            <div class="col-md-7 col align-content-center">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="yes" id="checkChecked" checked>
                 <label class="form-check-label" for="checkChecked">
@@ -46,7 +46,7 @@
                 </label>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col pb-3 pb-md-0">
               <button class="btn-action btn-middle m-0">Send</button>
             </div>
           </div>

@@ -7,10 +7,10 @@ import ContactForm from './ContactForm.vue';
   <section id="section-contact" class="section">
     <div class="container-fluid">
       <div class="row text-start justify-content-center">
-        <div class="col-md-6 col contact-text p-0">
+        <div class="col-md-6 col contact-text p-md-0 p-5">
           <ContactText />
         </div>
-        <div class="col-md-6 col p-0 ">
+        <div class="col-md-6 col p-md-0 p-3">
           <ContactForm />
         </div>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-form container text-start d-flex flex-column justify-content-center mb-5 mb-md-0 py-5 py-xl-0">
+  <div class="contact-form container text-start d-flex flex-column justify-content-center mb-5 mb-md-0 py-5">
     <form novalidate @submit.prevent="handleFormSubmit()">
       <div class="row justify-content-center">
         <div class="row justify-content-center">
@@ -24,7 +24,7 @@
         <div class="row justify-content-center">
           <div class="col-11 px-0">
             <span class="label label-form text-uppercase">Input field</span>
-            <EmailInput />
+            <EmailInput ref="emailInput" id="email" placeholder="name@mail.com" v-model.trim="email" />
           </div>
         </div>
         <div class="row justify-content-center">
@@ -69,54 +69,27 @@ export default {
   data() {
     return {
       name: '',
-      phoneNumber: '',
       email: '',
       message: '',
       error: null,
       success: null,
       statusMessage: '',
-      phoneError: '',
-      emailError: '',
     }
   },
   methods: {
-    // Handle errors emmited from EmailInput.vue and PhoneInput.vue components
-    handlePhoneError(msg) {
-      this.phoneError = msg;
-    },
-
-    handleEmailError(msg) {
-      this.emailError = msg;
-    },
-
-
     // Validate form inputs via specific validation methods from form conponents
     isFormValid() {
 
       let isNameValid = this.$refs.nameInput.validate();
-      // let isPhoneValid = this.$refs.phoneInput.validate();
-      // let isEmailValid = this.$refs.emailInput.validate();
+      let isEmailValid = this.$refs.emailInput.validate();
       let isMessageValid = this.$refs.messageTextArea.validate();
 
-
-      // Either mail or phonNumber is required
-      if (!this.requirePhoneOrEmail()) {
-        this.error = true;
-        this.phoneOrEmailMissing = true;
-        return false;
-      }
-
-      this.phoneOrEmailMissing = null;
-
-      if (!isNameValid || !isMessageValid || (!isEmailValid && !isPhoneValid)) {
+      if (!isNameValid || !isMessageValid || !isEmailValid) {
         this.error = true;
         return false;
       }
 
       this.error = null;
-      this.phoneOrEmailMissing = false;
-      this.phoneError = '';
-      this.emailError = '';
       return true;
     },
 
@@ -129,24 +102,12 @@ export default {
       else { this.cleanForm() }
     },
 
-    // Display toast with statusMessage
-    displayToast() {
-      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(this.$refs.toast);
-      toastBootstrap.show();
-    },
-
     // Clean input values in form
     cleanForm() {
       this.name = '';
-      this.phoneNumber = '';
       this.email = '';
       this.message = '';
-      this.phoneError = null;
-      this.emailError = null;
-      this.phoneOrEmailMissing = null;
       this.error = null;
-      this.$refs.phoneInput.cleanErrors();
-      this.$refs.emailInput.cleanErrors();
     }
   }
 }

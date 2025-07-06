@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import 'animate.css';
 export default {
   props: {
     id: String,
@@ -28,7 +27,7 @@ export default {
     },
     validate() {
       if (!this.modelValue.trim()) {
-        this.error = 'Please fill in your name.';
+        this.error = 'Please enter your name.';
         this.$emit('error', this.error);
         return false;
       }

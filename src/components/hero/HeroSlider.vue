@@ -42,6 +42,7 @@ export default {
     initializeSwiper() {
       const swiper = new Swiper('.swiper-hero', {
         direction: 'horizontal',
+        loop: true,
 
         pagination: {
           el: '.swiper-pagination',
@@ -53,9 +54,9 @@ export default {
           prevEl: '.swiper-button-prev',
         },
 
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        autoplay: {
+          delay: 5000,
+        },
       });
     }
   },

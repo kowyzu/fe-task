@@ -2,13 +2,13 @@
   <section id="section-pricing" class="section">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-md-6 col p-4 p-md-0 pricing-heading">
+        <div class="col-lg-6 col p-4 p-md-0 pricing-heading">
           <h3>Plans & Pricing</h3>
           <h5>Startup Framework is free forever — you only pay for custom domain hosting or to export your site.</h5>
         </div>
       </div>
-      <div class="row justify-content-center row-cols-1 row-cols-md-3 p-4 p-md-0 ">
-        <div class="col pricing-table mb-4 mb-md-0">
+      <div class="row justify-content-center row-cols-1 row-cols-lg-3 p-4 p-md-0 ">
+        <div class="col pricing-table mb-4 mb-lg-0">
           <PricingTableHeading :planName="starterPlanData.name" :planPrice="starterPlanData.price" />
           <ul class="p-0">
             <PricingTableItem v-for="(item) in starterPlanData.features" :key="item.id"
@@ -19,7 +19,7 @@
             <button class="btn-action btn-big mt-4">Get Started</button>
           </div>
         </div>
-        <div class="col pricing-table mx-md-4 mx-0 mb-4 mb-md-0">
+        <div class="col pricing-table mx-md-4 mx-0 mb-4 mb-lg-0">
           <PricingTableHeading :planName="professionalPlanData.name" :planPrice="professionalPlanData.price" />
           <ul class="p-0">
             <PricingTableItem v-for="(item) in professionalPlanData.features" :key="item.id"

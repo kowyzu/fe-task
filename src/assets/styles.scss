@@ -453,10 +453,9 @@ span {
 // PRICING SECTION
 // ----------------------------------------------------
 #section-pricing {
-    @include media-breakpoint-up(md) { 
-  min-height: 1130px;
-      
-    }
+  @include media-breakpoint-up(lg) { 
+    min-height: 1130px;
+  }
   .pricing-heading {
     margin-top: 100px;
     max-width: 586px;
@@ -468,10 +467,13 @@ span {
     }
   }
   .pricing-table {
-    max-width: 370px;
+    max-width: 500px;
     height: 730px;
     border: 2px solid $color-action-border;
     border-radius: 10px;
+    @include media-breakpoint-up(lg) { 
+      max-width: 370px;
+    }
     .pricing-table-heading {
       margin-left: 49px;
       .currency {
